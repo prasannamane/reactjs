@@ -1,0 +1,8 @@
+
+cd agro-connect
+npm create vite@latest
+-enter project name
+-select reactjs
+-select typescript
+npm install
+npm run dev
