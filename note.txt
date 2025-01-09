@@ -6,3 +6,4 @@ npm create vite@latest
 -select typescript
 npm install
 npm run dev
+npm run build -- --clearCache
