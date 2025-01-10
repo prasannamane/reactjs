@@ -1,0 +1,22 @@
+header {
+    background: #78bfee;
+}
+
+nav.container {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+img.logo {
+    height: 70px;
+    border: 1px solid #156fab;
+    border-radius: 16px;
+}
+
+.title {
+    border: 1px solid #78bfee;
+    margin: 10px 0px;
+    background: #daedfa;
+    padding: 10px;
+    border-radius: 16px;
+}

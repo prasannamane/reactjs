@@ -26,8 +26,9 @@ function App() {
         </p>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        Welcome to Agro Connect HomePage
       </p>
+      <a href='/register-list'>Register List</a>
     </>
   )
 }
