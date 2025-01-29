@@ -20,3 +20,8 @@ img.logo {
     padding: 10px;
     border-radius: 16px;
 }
+
+.error-message {
+    color: red;
+    font-size: 0.8em;
+}

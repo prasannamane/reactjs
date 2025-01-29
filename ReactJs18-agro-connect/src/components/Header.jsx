@@ -12,6 +12,8 @@ const Header = () => {
           <a class="btn btn-light" href='/'>Home</a>
           <a class="ms-3 btn btn-light" href='/user-list'>User List</a>
           <a class="ms-3 btn btn-light" href='/signup-form'>SignUp</a>
+          <a class="ms-3 btn btn-light" href='/signin-form'>SignIn</a>
+          <a class="ms-3 btn btn-light" href='/signout-form'>SignOut</a>
         </div>
       </div>
      

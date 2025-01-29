@@ -32,6 +32,12 @@ const SignupForm = () => {
       newErrors.password = "Password must be at least 6 characters long";
     }
 
+    if (!formData.confirm_password) {
+      newErrors.confirm_password = "Confirm Pssword is required";
+    } else if (formData.confirm_password != formData.confirm_password) {
+      newErrors.password = "Confirm Password and Pssword are not matching";
+    }
+
     if (!/^\d{10}$/.test(formData.mobile)) {
       newErrors.mobile = "Mobile Number must be exactly 10 digits";
     }
@@ -102,7 +108,7 @@ const SignupForm = () => {
               onChange={handleChange}
               class="form-control"
             />
-            {errors.username && <p class="error-text">{errors.username}</p>}
+            {errors.username && <p class="error-message">{errors.username}</p>}
           </div>
 
           <div>
@@ -114,8 +120,9 @@ const SignupForm = () => {
               onChange={handleChange}
               class="form-control"
             />
-            {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
+            {errors.email && <p class="error-message">{errors.email}</p>}
           </div>
+
           <div>
             <label htmlFor="password" class="form-label">Password:</label>
             <input type="password"
@@ -126,18 +133,32 @@ const SignupForm = () => {
               class="form-control"
             />
             {errors.password && (
-              <p style={{ color: "red" }}>{errors.password}</p>
+              <p class="error-message">{errors.password}</p>
+            )}
+          </div>
+
+<div>
+          <label htmlFor="confirm_password" class="form-label">Confirm Password:</label>
+            <input type="confirm_password"
+              id="confirm_password"
+              name="confirm_password"
+              value={formData.confirm_password}
+              onChange={handleChange}
+              class="form-control"
+            />
+            {errors.confirm_password && (
+              <p class="error-message">{errors.confirm_password}</p>
             )}
           </div>
 
           <div>
-            <label htmlFor="mobile" class="form-label">mobile:</label>
+            <label htmlFor="mobile" class="form-label">Mobile:</label>
             <input type="text" id="mobile" name="mobile"
               value={formData.mobile}
               onChange={handleChange}
               class="form-control"
             />
-            {errors.mobile && <p style={{ color: "red" }}>{errors.mobile}</p>}
+            {errors.mobile && <p class="error-message">{errors.mobile}</p>}
           </div>
           <button type="submit" style={{ marginTop: "10px" }} disabled={isLoading} class="btn btn-primary">
             {isLoading ? "Submitting..." : "Signup"}
